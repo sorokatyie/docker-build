@@ -27,7 +27,7 @@ jobs:
           status: ${{ job.status }}
           slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
           channels: '#sorokatyigit'
-- name: Notify Slack
+      - name: Notify Slack
         uses: Ilshidur/action-slack@v3.2.0
         with:
           status: ${{ job.status }}
