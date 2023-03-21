@@ -29,7 +29,7 @@ jobs:
           push: true
           tags: | 
             sorokatyi/docker_build:${{ github.ref_name }}
-            ghcr.io/sorokatyi/docker_build:${{ github.ref_name }}
+
 
 
       - name: Slack notification
