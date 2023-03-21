@@ -38,9 +38,21 @@ jobs:
 
 
 
-      - name: Slack notification
+      - name: Slack notification fail
         uses: rtCamp/action-slack-notify@v2.0.2
         if: failure()
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName
+          mention: '@channel'
+          channel: sorokatyigit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Slack notification ok
+        uses: rtCamp/action-slack-notify@v2.0.2
+        if: sucess()
         with:
           status: ${{ job.status }}
           fields: repo,message,commit,author,action,eventName
