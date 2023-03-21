@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Build the Docker image # push The image to the docker hub
-        run: docker build . --file Dockerfile --tag 
+        run:  docker build -t portlisten:0.1 -f Dockerfile .
       - name: Slack notification
         uses: rtCamp/action-slack-notify@v2.0.2
         if: failure()
