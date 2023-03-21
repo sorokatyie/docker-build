@@ -19,7 +19,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: sorokatyi
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          password: ${{ secrets.DOCKER_HUB_ACESS_TOKEN }}
 
       - name: Log in to the Container registry
         uses: docker/login-action@v1
