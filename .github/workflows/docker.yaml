@@ -28,8 +28,8 @@ jobs:
           context: .
           push: true
           tags: | 
-            nickvab/docker_build:${{ github.ref_name }}
-            ghcr.io/nickvab/docker_build:${{ github.ref_name }}
+            sorokatyi/docker_build:${{ github.ref_name }}
+            ghcr.io/sorokatyi/docker_build:${{ github.ref_name }}
 
 
       - name: Slack notification
